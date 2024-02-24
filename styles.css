@@ -13,24 +13,28 @@ body {
 
 .bingo-board-container {
   margin-top: 20px;
+  max-width: 90%; /* Adjusted for smaller screens */
+  overflow-x: auto; /* Allow horizontal scroll on smaller screens */
 }
 
 .bingo-board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* Adjusted for smaller screens */
   gap: 5px;
+  max-width: 500px; /* Adjusted for smaller screens */
+  margin: 0 auto; /* Center the board */
 }
 
 .bingo-square {
-  width: 100px; /* Fixed size for each square */
-  height: 100px; /* Fixed size for each square */
+  width: 100%; /* Adjusted for smaller screens */
+  padding-top: 100%; /* Maintain square aspect ratio */
   background-color: white;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-size: 16px; /* Adjust font size */
+  font-size: 4vw; /* Adjust font size based on viewport width */
 }
 
 .selected {
