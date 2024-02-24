@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column; /* Ensure title is at the top */
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.bingo-board-container {
+  margin-top: 20px;
+}
+
+.bingo-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.bingo-square {
+  width: 100px; /* Fixed size for each square */
+  height: 100px; /* Fixed size for each square */
+  background-color: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px; /* Adjust font size */
+}
+
+.selected {
+  background-color: #aed9e0; /* pastel blue */
+}
